@@ -3,6 +3,7 @@
     --dark: #333333;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --topBottom: rgb(40, 40, 255);
 }
 
 html{
@@ -12,9 +13,10 @@ html{
 }
 
 body {
-  background-color: #cccccc;
+  background-color: rgb(255, 21, 17);
   margin: 0px;
   line-height: 1.4;
+  margin-bottom: 1px;
 }
 
 img{
@@ -23,8 +25,10 @@ img{
 
 .wrapper{
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 17px;
 }
+
+/* Header */
 header{
   position:sticky;
   top: 0;
@@ -34,19 +38,23 @@ header{
 .top{
   text-align: right;
   font-size: 1.1rem;
-  background-color: #ccc;
+  background-color: var(--topBottom);
 }
 .top>a{
   text-decoration: none;
+  color: white;
   /* color: blue; */
 
 }
+
+/* Main Navigation */
 .main-nav{
   /* display: grid; */
   /* grid-gap: 20px; */
-  padding:0;
-  background: blue;
+  padding:5px 0;
+  background-color: rgb(30, 30, 255);
   margin: 0;
+  border: 1px solid white;
   /* grid-template-columns: 1fr 7fr 1fr; */
 }
 
@@ -58,41 +66,199 @@ header{
   text-align: center;
   margin: 0;
   list-style: none;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: 1fr 7fr 1fr;
+  /* grid-template-columns: repeat(auto-fit minmax(5px, 1fr)); */
 }
 
-.main-nav>ul>li>a{
-  /* background: var(--primary); */
+.links{
+  display: grid;
+  grid-gap: 17px;
+  grid-template-columns: repeat(7, 1fr);
   font-size: 1.5em;
-  /* display: block; */
-  text-decoration: none;
-  /* text-align: center; */
-  /* background-color: var(--light); */
-  /* padding: 0.4rem; */
   color: var(--light);
-  /* box-shadow: var(--shadow); */
-
 }
-.main-nav>ul>li>a:hover{
+.links>li>a{
+  text-decoration: none;
+  text-align: center;
+  color: var(--light);
+}
+.links>li>a:hover{
   color: #ccc;
 }
 .main-nav img{
-  max-width: 70px;
+  max-width: 50px;
 }
 
-/* .mainBody{
-  margin: 200px 0 50px 50px;
-} */
+/* Main Body */
+.mainBody{
+  background: #ccc;
+  display: grid;
+  margin: 0 50px;
+  /* grid-template-areas:
+  'topContainer'
+  'topContainer'
+  'us'
+  'boxes' */
+}
+/* Top Container */
+.topContainer{
+  /* grid-area: topContainer; */
+  display: grid;
+  /* grid-gap: 20px; */
+  grid-template-areas:
+  'announcements announcements announcements'
+  'featuredArticles featuredArticles sermons'
+  'music music albums';
+}
+.announcements{
+  grid-area: announcements;
+  display: grid;
+  grid-gap: 17px;
+  margin-bottom: 8px;
+  /* background-image: url('../gallery/announcements/veterans.JPG'); */
+  /* grid-template-columns: 3fr 1fr; */
+}
+.announcements>img{
+  min-width: 100%;
+  max-height: 500px;
+}
+.featuredArticles{
+  grid-area: featuredArticles;
+}
+.sermons{
+  grid-area: sermons;
+}
+.music{
+  grid-area: music;
+}
+.albums{
+  grid-area: albums;
+}
 
 
 
 
-@media (max-width: 700px) {
-  header{
-    margin: auto;
-  }
+.us{
+  /* grid-area: us; */
+}
+.us>img{
+  max-height: 400px;
+  float: left;
+}
+.boxes{
+  /* grid-area: boxes; */
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+  box-shadow: var(--shadow);
+  padding: 5px;
+  margin: 3px;
+}
+
+footer{
+  margin-top: 2rem;
+  background: var(--topBottom);
+  color: var(--light);
+  text-align: center;
+  align-items: center;
+  padding: 0px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
   .mainBody{
-    margin: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .topContainer{
+    /* grid-area: topContainer; */
+    display: grid;
+    /* grid-gap: 20px; */
+    grid-template-areas:
+    'announcements'
+    'featuredArticles'
+    'music'
+    'sermons'
+    'albums';
+  }
+  /* Main Navigation */
+  .links{
+    display: grid;
+    grid-gap: 17px;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.5em;
+    color: var(--light);
+  }
+  .links>li>a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--light);
+  }
+  .links>li>a:hover{
+    color: #ccc;
+  }
+  .main-nav img{
+    max-width: 50px;
   }
 
+
+}
+
+@media (max-width: 550px) {
+  .mainBody{
+    padding: 0;
+    margin: 0;
+  }
+  .topContainer{
+    /* grid-area: topContainer; */
+    display: grid;
+    /* grid-gap: 20px; */
+    grid-template-areas:
+    'announcements'
+    'featuredArticles'
+    'music'
+    'sermons'
+    'albums';
+  }
+  header{
+    position: inherit;
+  }
+  /* Main Navigation */
+  .main-nav{
+    border: none;
+    border-top: 1px solid white;
+  }
+  .main-nav ul{
+    display: grid;
+    grid-gap: 5px;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(auto-fit minmax(5px, 1fr)); */
+  }
+  .links{
+    display: grid;
+    grid-gap: 17px;
+    grid-template-columns: 1fr;
+    font-size: 1.3em;
+    color: var(--light);
+  }
+  .links>li>a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--light);
+  }
+  .links>li>a:hover{
+    color: #ccc;
+  }
+  .main-nav img{
+    max-width: 50px;
+  }
 }
