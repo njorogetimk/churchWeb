@@ -4,6 +4,7 @@
     --light: #fff;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
     --topBottom: rgb(40, 40, 255);
+    --topMargin: 100px;
 }
 
 html{
@@ -13,7 +14,9 @@ html{
 }
 
 body {
-  background-color: rgb(255, 21, 17);
+  background-color: white;
+  /* background-image: url('../images/wall3.jpg'); */
+  /* background-repeat: round; */
   margin: 0px;
   line-height: 1.4;
   margin-bottom: 1px;
@@ -25,7 +28,7 @@ img{
 
 .wrapper{
   display: grid;
-  grid-gap: 17px;
+  grid-gap: 12px;
 }
 
 /* Header */
@@ -82,6 +85,9 @@ header{
   text-align: center;
   color: var(--light);
 }
+.links>li>a.active{
+  color: #ccc;
+}
 .links>li>a:hover{
   color: #ccc;
 }
@@ -91,8 +97,9 @@ header{
 
 /* Main Body */
 .mainBody{
-  background: #ccc;
+  background: #eee;
   display: grid;
+  grid-gap: 30px;
   margin: 0 50px;
   /* grid-template-areas:
   'topContainer'
@@ -104,19 +111,18 @@ header{
 .topContainer{
   /* grid-area: topContainer; */
   display: grid;
-  /* grid-gap: 20px; */
+  grid-gap: 17px;
   grid-template-areas:
   'announcements announcements announcements'
   'featuredArticles featuredArticles sermons'
   'music music albums';
+  color: white;
 }
 .announcements{
   grid-area: announcements;
   display: grid;
   grid-gap: 17px;
-  margin-bottom: 8px;
-  /* background-image: url('../gallery/announcements/veterans.JPG'); */
-  /* grid-template-columns: 3fr 1fr; */
+  /* background: white; */
 }
 .announcements>img{
   min-width: 100%;
@@ -124,41 +130,131 @@ header{
 }
 .featuredArticles{
   grid-area: featuredArticles;
+  display: grid;
+  grid-gap: 3px;
+  /* margin-top: var(--topMargin); */
+  background: #6bcae2;
+  /* grid-template-columns: 1fr; */
+}
+.title{
+  text-align: center;
+}
+.title h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.content{
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.content h2{
+  font-size: 1em;
+  text-decoration: underline;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 .sermons{
   grid-area: sermons;
+  margin-top: var(--topMargin);
+  background: #51a5ba;
+  /* margin-bottom: 3px; */
+}
+.sermons img{
+  float:left;
+  max-height: 50px;
+}
+.sermons h2{
+  color: gold;
+}
+.sermons>.content>a{
+  text-decoration: none;
+  color: gold;
+}
+.sermons>.content>a:hover{
+  color: rgb(255, 250, 100);
+}
+.sermons>.content{
+  display: inherit;
+}
+.sermons e{
+  font-style: italic;
 }
 .music{
   grid-area: music;
+  display: grid;
+  grid-gap: 3px;
+  margin-top: var(--topMargin);
+  grid-template-columns:1fr;
+  background: #41924b;
+}
+.music>.title>h2>a{
+
+}
+.music>.title>h2>a:hover{
+  text-decoration: none;
+  /* color: #11f; */
+}
+.content iframe{
+  max-width: 100%;
 }
 .albums{
   grid-area: albums;
+  margin-top: var(--topMargin);
+  background-color: #afeaaa;
 }
-
+.embedded{
+  max-width: 100%;
+}
 
 
 
 .us{
   /* grid-area: us; */
+  margin: 3px!important;
+  background: #87e293;
 }
-.us>img{
-  max-height: 400px;
-  float: left;
+.us h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration:underline;
+}
+.us img , .articles img{
+  max-height: 250px;
+  margin: 7px;
+  float:left;
 }
 .boxes{
   /* grid-area: boxes; */
   display: grid;
   grid-gap: 7px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background: #fe8402;
+}
+.boxes>.box{
+  text-align: center;
+  background: #fe8432;
+}
+.maps>iframe{
+  max-width: 100%;
+  min-height: 100%;
 }
 .box{
   box-shadow: var(--shadow);
   padding: 5px;
-  margin: 3px;
+  margin: 0px;
 }
-
+/* .boxes>.box{
+  text-align: center;
+} */
+.btn{
+  background: white;
+}
+a.btn:hover{
+  background: #999;
+}
 footer{
-  margin-top: 2rem;
   background: var(--topBottom);
   color: var(--light);
   text-align: center;
@@ -166,7 +262,39 @@ footer{
   padding: 0px;
 }
 
-
+.articles{
+  padding: 3px;
+  color: White;
+  background-color: rgb(10, 100, 250);
+}
+.articles h2{
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+.articles h3{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+.articles p{
+  text-align: justify;
+}
+.articles p>e{
+  font-style: italic;
+}
+.topFeatured{
+  margin: 3px;
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: rgb(50, 150, 250);
+}
+.other{
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: rgb(100, 150, 250);
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -260,5 +388,11 @@ footer{
   }
   .main-nav img{
     max-width: 50px;
+  }
+  .us>img{
+    float:none;
+  }
+  .btn{
+    display: block;
   }
 }
