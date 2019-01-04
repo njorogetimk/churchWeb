@@ -38,8 +38,16 @@
   font-size: 1.5em;
   text-align: center;
 }
+.delivery h3{
+  font-size: 1.2em;
+  /* text-align: center; */
+  font-weight: bold;
+}
 .delivery p{
   text-align: justify;
+}
+.delivery e{
+  font-style: italic;
 }
 
 .nav-p{
