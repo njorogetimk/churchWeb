@@ -1,0 +1,29 @@
+.gallery{
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.album{
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: 1fr;
+}
+.g_title{
+  font-size: 1.5em;
+  text-align: center;
+}
+.g_pics{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.more{
+  text-align: center;
+}
+.album_pics{
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+img{
+  max-width: 100%;
+}
