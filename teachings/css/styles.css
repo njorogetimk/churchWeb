@@ -1,5 +1,12 @@
 .mainBody{
   background-color: #005B9A;
+  grid-gap: 0px;
+}
+.t_nav>.bton{
+  padding: 0px!important;
+  margin: 0px;
+  /* background: red!important; */
+  color: white;
 }
 .teachingsTitle{
   font-size: 1.5em;
