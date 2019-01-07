@@ -163,9 +163,19 @@ header{
 }
 .announcements{
   grid-area: announcements;
-  display: grid;
-  grid-gap: 17px;
-  /* background: white; */
+  /* display: grid; */
+  /* grid-gap: 17px; */
+	min-height: 400px;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+  background-image: url('../images/us.jpg');
+	background-size: cover;
+	background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background: red; */
 }
 .announcements>img{
   min-width: 100%;

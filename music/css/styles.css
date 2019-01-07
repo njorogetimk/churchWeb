@@ -1,0 +1,21 @@
+.mainBody{
+  grid-gap: 3px;
+}
+.video-top{
+  font-size: 1em;
+  margin-top: 0;
+  background: #0c2c52;
+  color: white;
+}
+.utube{
+  background: #5e9dc8;
+  text-align: center;
+}
+.video-top a{
+  text-decoration: none;
+  color: #5555ff;
+}
+.video-top a:hover{
+  color: #8899ff;
+  font-size: 1.06em;
+}
