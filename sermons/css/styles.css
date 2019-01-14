@@ -48,3 +48,6 @@
 .next{
   float: right;
 }
+.col-md-9{
+  max-width: 100%;
+}

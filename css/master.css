@@ -1,16 +1,7 @@
-:root{
-    --primary: #ddd;
-    --dark: #333333;
-    --light: #fff;
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-    --topBottom: rgb(40, 40, 255);
-    --topMargin: 100px;
-}
-
 html{
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark);
+  color: #333333;
 }
 
 body {
@@ -68,6 +59,9 @@ img{
 iframe{
   max-width: 100%;
 }
+.clr{
+  clear: both;
+}
 
 .wrapper{
   display: grid;
@@ -81,14 +75,18 @@ header{
   margin: 0;
   /* align-items: center; */
 }
+e{
+  font-style: italic;
+}
+
 .top{
   text-align: right;
   font-size: 1.1rem;
-  background-color: var(--topBottom);
+  background-color: rgb(40, 40, 255);
 }
 .top>a{
   text-decoration: none;
-  color: white;
+  color: white!important;
   /* color: blue; */
 
 }
@@ -121,12 +119,12 @@ header{
   grid-gap: 17px;
   grid-template-columns: repeat(7, 1fr);
   font-size: 1.5em;
-  color: var(--light);
+  /* color: var(--light); */
 }
 .links>li>a{
   text-decoration: none;
   text-align: center;
-  color: var(--light);
+  color: white;
 }
 .links>li>a.active{
   color: #ccc;
@@ -174,6 +172,7 @@ header{
   background-image: url('../images/us.jpg');
 	background-size: cover;
 	background-position: center;
+  display: none;
   /* background-repeat: no-repeat; */
   /* background: red; */
 }
@@ -210,9 +209,13 @@ header{
   font-weight: bold;
   text-transform: capitalize;
 }
+#sermonFeatured a{
+  text-decoration: none;
+  color: gold;
+}
 .sermons{
   grid-area: sermons;
-  margin-top: var(--topMargin);
+  margin-top: 100px;
   background: #51a5ba;
   /* margin-bottom: 3px; */
 }
@@ -233,14 +236,14 @@ header{
 .sermons>.content{
   display: inherit;
 }
-.sermons e{
+/* .sermons e{
   font-style: italic;
-}
+} */
 .music{
   grid-area: music;
   display: grid;
   grid-gap: 3px;
-  margin-top: var(--topMargin);
+  margin-top: 100px;
   grid-template-columns:1fr;
   background: #41924b;
 }
@@ -257,7 +260,7 @@ header{
 .albums{
   grid-area: albums;
   display: none;
-  margin-top: var(--topMargin);
+  margin-top: 100px;
   background-color: #afeaaa;
 }
 .embedded{
@@ -290,14 +293,14 @@ header{
 }
 .boxes>.box{
   text-align: center;
-  background: #fe8432;
+  background: #fd9732;
 }
 .maps>iframe{
   max-width: 100%;
   min-height: 100%;
 }
 .box{
-  box-shadow: var(--shadow);
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   padding: 5px;
   margin: 0px;
 }
@@ -331,8 +334,8 @@ a.bton:hover{
   text-decoration: none;
 }
 footer{
-  background: var(--topBottom);
-  color: var(--light);
+  background: rgb(40, 40, 255);
+  color: white;
   text-align: center;
   align-items: center;
   padding: 0px;
@@ -391,23 +394,22 @@ footer{
   }
   /* Main Navigation */
   .links{
-    display: grid;
-    grid-gap: 17px;
+    /* display: grid; */
+    /* grid-gap: 17px; */
     grid-template-columns: repeat(4, 1fr);
-    font-size: 1.5em;
-    color: var(--light);
+    /* font-size: 1.5em; */
   }
-  .links>li>a{
+  /* .links>li>a{
     text-decoration: none;
     text-align: center;
     color: var(--light);
   }
   .links>li>a:hover{
     color: #ccc;
-  }
-  .main-nav img{
+  } */
+  /* .main-nav img{
     max-width: 50px;
-  }
+  } */
 
 
 }
@@ -448,13 +450,13 @@ footer{
     /* grid-template-columns: repeat(auto-fit minmax(5px, 1fr)); */
   }
   .links{
-    display: grid;
-    grid-gap: 17px;
+    /* display: grid; */
+    /* grid-gap: 17px; */
     grid-template-columns: 1fr;
     font-size: 1.3em;
-    color: var(--light);
+    /* color: var(--light); */
   }
-  .links>li>a{
+  /* .links>li>a{
     text-decoration: none;
     text-align: center;
     color: var(--light);
@@ -464,11 +466,11 @@ footer{
   }
   .main-nav img{
     max-width: 50px;
-  }
+  } */
   .us>img{
     float:none;
   }
-  .btn{
+  .bton{
     display: block;
   }
 }
