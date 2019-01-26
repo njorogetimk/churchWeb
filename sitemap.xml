@@ -19,11 +19,11 @@
 </url>
 <url>
 <loc>https://capstonemessage.org/sermons/series.html</loc>
-<priority>0.8</priority>
+<priority>0.86</priority>
 </url>
 <url>
-<loc>https://capstonemessage.org/sermons/.html</loc>
-<priority>0.8</priority>
+<loc>https://capstonemessage.org/sermons/2018/goldenNuggets/index.html</loc>
+<priority>0.86</priority>
 </url>
 
 <!-- Billboard -->
@@ -31,3 +31,10 @@
 <loc>https://capstonemessage.org/billboard</loc>
 <priority>0.9</priority>
 </url>
+
+<!-- Gallery -->
+<url>
+<loc>https://capstonemessage.org/gallery</loc>
+<priority>0.9</priority>
+</url>
+</urlset>
